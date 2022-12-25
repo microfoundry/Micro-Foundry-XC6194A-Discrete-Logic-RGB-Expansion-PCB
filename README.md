@@ -10,3 +10,29 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 - Voltage translation on SW (Switch) output -> MCU input with Schmitt-Trigger input
 - Annode series resistor to provide global LED current control
 - On-board micro switch for additional XC6194A control
+- Mount holes will accept Wurth Electronics SMT Standoffs
+
+## Pinouts
+### Switch
+1. SW   - Momentary Switch Input (Active LOW)
+2. GND  - Ground
+3. ANN  - Common LED Annode
+4. L1   - LED 1 Cathode
+5. L2   - LED 2 Cathode
+6. L3   - LED 3 Cathode
+### IO (to MCU)
+1. GND  - Ground
+2. VCC  - Voltage In (MCU)
+3. SW   - Switch pressed input (Active HIGH)
+4. SHDN - Shutdown Output (Active HIGH)
+5. PG   - Power Good Output (Active HIGH) **(see NOTE)**
+6. LED1 - LED 1 Driver Output (Active HIGH)
+7. LED2 - LED 1 Driver Output (Active HIGH)
+8. LED3 - LED 1 Driver Output (Active HIGH)
+### Expansion
+1. VIn  - Voltage In 
+2. GND  - Ground
+3. VOut - Voltage Out
+4. SW   - Momentary Switch Input (Active LOW)
+5. PG   - Power Good Output (Active HIGH)
+6. SHDN - Shutdown Input (Active HIGH)
