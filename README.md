@@ -2,10 +2,10 @@
 Information about the XC6194A Expansion PCB based on discrete logic to drive 3 LEDs and provide voltage translation
 
 ## Description
-The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive RGB Momentary switch (with common annode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
+The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive a RGB LED illuminated Momentary switch or up to 3 individual LED indicators (with common annode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
 
 ## Features
-- 3 Channels of RGB switching with 32mA sink capability utilizing Open Drain Inverters
+- 3 Channels of LED switching with 32mA sink capability per channel utilizing Open Drain Inverters (@ 5v)
 - An additional "Power State" channel to provide a sink to LED channel 1 when XC6194 is in Off State. (more details [below](/README.md#power-state-channel))
 - Voltage translation on SW (Switch) output -> MCU input with Schmitt-Trigger input/inverted output
 - Annode series resistor to provide global LED current control
