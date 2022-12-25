@@ -10,7 +10,7 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 - 3 Channels of LED switching with 32mA sink capability per channel utilizing Open Drain Inverters (@ 5v)
 - An additional "Power State" channel to provide a sink to LED channel 1 when XC6194 is in Off State. (more details [below](/README.md#power-state-channel))
 - Voltage translation on SW (Switch) output -> MCU input with Schmitt-Trigger input/inverted output
-- Anode series resistor to provide global LED current control (more details [below](/README.md#anode series resistor))
+- Anode series resistor to provide global LED current control (more details [below](/README.md#anode-series-resistor))
 - On-board micro switch for additional XC6194A control
 - Mount holes will accept Wurth Electronics SMT Standoffs
 
