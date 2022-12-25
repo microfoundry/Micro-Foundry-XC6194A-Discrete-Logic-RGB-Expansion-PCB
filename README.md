@@ -25,7 +25,7 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 2. VCC  - Voltage In (MCU)
 3. SW   - Switch pressed input (Active HIGH)
 4. SHDN - Shutdown Output (Active HIGH)
-5. PG   - Power Good Output (Active HIGH) **(see NOTE)**
+5. PG   - Power Good Output (Active HIGH) **see NOTE**
 6. LED1 - LED 1 Driver Output (Active HIGH)
 7. LED2 - LED 1 Driver Output (Active HIGH)
 8. LED3 - LED 1 Driver Output (Active HIGH)
@@ -36,3 +36,5 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 4. SW   - Momentary Switch Input (Active LOW)
 5. PG   - Power Good Output (Active HIGH)
 6. SHDN - Shutdown Input (Active HIGH)
+
+**NOTE:** The Power Good Output is traditionally uitilized to enable a downstream power supply therefore the output operates at VIn level. 
