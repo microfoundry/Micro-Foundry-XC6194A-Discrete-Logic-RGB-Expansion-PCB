@@ -2,13 +2,15 @@
 Information about the XC6194A Expansion PCB based on discrete logic to drive 3 LEDs and provide voltage translation
 
 ## Description
-The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive a RGB LED illuminated Momentary switch or up to 3 individual LED indicators (with common annode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
+The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive a RGB LED illuminated Momentary switch or up to 3 individual LED indicators (with common anode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
+
+**Please NOTE:** Color representation is totally dependant on the LEDs utilized. Therefore there are no guarentees this LED driver will have the ability to produce the accurite color representation possible with 3x LEDs.
 
 ## Features
 - 3 Channels of LED switching with 32mA sink capability per channel utilizing Open Drain Inverters (@ 5v)
 - An additional "Power State" channel to provide a sink to LED channel 1 when XC6194 is in Off State. (more details [below](/README.md#power-state-channel))
 - Voltage translation on SW (Switch) output -> MCU input with Schmitt-Trigger input/inverted output
-- Annode series resistor to provide global LED current control
+- Anode series resistor to provide global LED current control (more details [below](/README.md#anode series resistor))
 - On-board micro switch for additional XC6194A control
 - Mount holes will accept Wurth Electronics SMT Standoffs
 
@@ -19,7 +21,7 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 | --- | -------- | ----------- | ---------- |
 | 1 | SW | Momentary Switch Input (Active LOW) | XC6194A VIn |
 | 2 | GND | Ground | |
-| 3 | ANN |Common LED Annode | XC6194A VIn |
+| 3 | ANN |Common LED Anode | XC6194A VIn |
 | 4 | LED1 | LED 1 Cathode | |
 | 5 | LED2 | LED 2 Cathode | |
 | 6 | LED3 | LED 3 Cathode | |
@@ -53,6 +55,11 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 **NOTE-2:** Circuit is pulled to GND via pull-down resistor. XC6149A datasheet specifies a voltage level above 1.1v will trigger shutdown. Some MCUs may exihibit an output glitch on the SHDN during power-up and the XC6194 may immediately shutdown. If this is experienced, a user implemented RC filter could possibly eliminate the issue.
 
 ## Power State Channel
-Channel 1 LED has a secondary open-drain buffer with its input referenced to VOut. When the XC6194A is in its off-state, the logic will illuminate the Channel 1 LED. This can be useful to provide a vsual indicator that the power is off. When the XC6194A is in its on-state, the secondary open-drain output is in a high-z state and the primary Channel 1 LED open-drain inverter is free to drive the LED. If there is no desire to have the Channel 1 LED illuminated when the power is off, this feature can disabled by removing the resistor as indicated in the preceeding image:
+Channel 1 LED has a secondary open-drain buffer with its input referenced to VOut. When the XC6194A is in its off-state, the logic will illuminate the Channel 1 LED. This can be useful to provide a vsual indicator that the power is off. When the XC6194A is in its on-state, the secondary open-drain output is in a high-z state and the primary Channel 1 LED open-drain inverter is free to drive the LED. If there is no desire to have the Channel 1 LED illuminated when the power is off, this feature can disabled by removing the resistor as indicated in the following image:
 
 **TODO:** Add image to indicate R2 removal...
+
+## Anode Series Resistor
+The resistor noted in the following image offers global current control via the common anode pin. The default value as manufactured is 0 Ohms (Zero) and can be replaced if necessary.
+
+**TODO:** Add image to indicate R3 location...
