@@ -4,7 +4,7 @@ Information about the XC6194A Expansion PCB based on discrete logic to drive 3 L
 ## Description
 The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive a RGB LED illuminated Momentary switch or up to 3 individual LED indicators (with common anode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
 
-**Please NOTE:** Color representation is totally dependant on the LEDs utilized. Therefore there are no guarentees this LED driver will have the ability to produce the accurite color representation possible with 3x LEDs.
+**Please NOTE:** Color representation is totally dependent on the LEDs utilized. Therefore, there are no guarantees this LED driver will have the ability to produce the accurate color representation possible with 3x LEDs.
 
 ## Features
 - 3 Channels of LED switching with 32mA sink capability per channel utilizing Open Drain Inverters (@ 5v)
@@ -39,7 +39,7 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 | 7 | LED2 | LED 2 Driver | Output (Active HIGH) | MCU VCC |
 | 8 | LED3 | LED 3 Driver | Output (Active HIGH) | MCU VCC |
 
-**NOTE-1:** The Power Good Output is traditionally uitilized to enable a downstream power supply, therefore the output operates at XC6194A VIn Potential. Please verify voltage compatability before connecting.
+**NOTE-1:** The Power Good output is traditionally utilized to enable a downstream power supply, therefore the output operates at XC6194A VIn Potential. Please verify voltage compatibility before connecting.
 
 ### Expansion
 
@@ -52,10 +52,10 @@ The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability 
 | 5 | PG | XC6194A Power Good | Output (Active HIGH) | XC6194A VIn |
 | 6 | SHDN | XC6194A Shutdown | Input (Active HIGH) **See NOTE-2** | GND |
 
-**NOTE-2:** Circuit is pulled to GND via pull-down resistor. XC6149A datasheet specifies a voltage level above 1.1v will trigger shutdown. Some MCUs may exihibit an output glitch on the SHDN during power-up and the XC6194 may immediately shutdown. If this is experienced, a user implemented RC filter could possibly eliminate the issue.
+**NOTE-2:** Circuit is pulled to GND via pull-down resistor. XC6149A datasheet specifies a voltage level above 1.1v will trigger shutdown. Some MCUs may exhibit an output glitch on the SHDN during power-up and the XC6194 may immediately shutdown. If this is experienced, a user implemented RC filter could possibly eliminate the issue.
 
 ## Power State Channel
-Channel 1 LED has a secondary open-drain buffer with its input referenced to VOut. When the XC6194A is in its off-state, the logic will illuminate the Channel 1 LED. This can be useful to provide a vsual indicator that the power is off. When the XC6194A is in its on-state, the secondary open-drain output is in a high-z state and the primary Channel 1 LED open-drain inverter is free to drive the LED. If there is no desire to have the Channel 1 LED illuminated when the power is off, this feature can disabled by removing the resistor as indicated in the following image:
+Channel 1 LED has a secondary open-drain buffer with its input referenced to VOut. When the XC6194A is in its off-state, the logic will illuminate the Channel 1 LED. This can be useful to provide a vsual indicator that the power is off. When the XC6194A is in its on-state, the secondary open-drain output is in a high-z state and the primary Channel 1 LED open-drain inverter is free to drive the LED. If there is no desire to have the Channel 1 LED illuminated when the power is off, this feature can be disabled by removing the resistor as indicated in the following image:
 
 **TODO:** Add image to indicate R2 removal...
 
