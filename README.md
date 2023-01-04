@@ -1,13 +1,16 @@
 # Micro-Foundry-XC6194A-Discrete-Logic-RGB-Expansion-PCB
 Information about the XC6194A Expansion PCB based on discrete logic to drive 3 LEDs and provide voltage translation
 
+## Why?
+I utilize the TOREX XC6194A in various projects and some have the extra IO to drive the RGB LEDs. So I rolled up the design into an accessory to complement the XC6194 breakout, including a few extra features.
+
 ## Description
 The Micro Foundry XC6194A Discrete Logic RGB Expansion PCB provides the ability to drive a RGB LED illuminated Momentary switch or up to 3 individual LED indicators (with common anode) in addition to offering voltage translation where the XC6194A switched VCC differs from MCU VCC. 
 
 **Please NOTE:** Color representation is totally dependent on the LEDs utilized. Therefore, there are no guarantees this LED driver will have the ability to produce the accurate color representation possible with 3x LEDs.
 
 ## Features
-- 3 Channels of LED switching with 32mA sink capability per channel utilizing Open Drain Inverters (@ 5v)
+- 3 Channels of LED switching with 32mA at 5v (24mA at 3.3v) sink capability per channel utilizing Open Drain Inverters 
 - An additional "Power State" channel to provide a sink to LED channel 1 when XC6194 is in Off State. (more details [below](/README.md#power-state-channel))
 - Voltage translation on SW (Switch) output -> MCU input with Schmitt-Trigger input/inverted output
 - Anode series resistor to provide global LED current control (more details [below](/README.md#anode-series-resistor))
